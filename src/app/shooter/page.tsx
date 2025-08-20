@@ -1,14 +1,14 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { StoreApi } from "./useGamesStore";
-import Spinners from "./_componants/Spinners/Spinners";
+import { StoreApi } from "../useGamesStore";
+import Spinners from "../_componants/Spinners/Spinners";
 
-export default function Home() {
+export default function Shooter() {
   const { Games, funFetch, isLoading, error, errorMsg } = StoreApi();
 
   useEffect(() => {
-    funFetch("mmorpg");
+    funFetch("shooter");
   }, []);
 
   if (isLoading) return <Spinners />;
@@ -19,7 +19,6 @@ export default function Home() {
         {Games?.map((game) => (
           <div key={game.id} className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-5">
             <div className="bg-[#272121] text-[#F6E9E9] rounded-xl p-4 shadow-lg hover:shadow-[#E16428]/30 transition-all duration-300 min-h-[360px] flex flex-col justify-between">
-              {/* القسم العلوي (المحتوى + الزر) */}
               <div className="flex flex-col flex-grow">
                 <Image
                   src={game?.thumbnail}
@@ -35,7 +34,6 @@ export default function Home() {
                   {game?.short_description}
                 </p>
 
-                {/* الزر يكون آخر عنصر في القسم العلوي */}
                 <div className="mt-auto">
                   <a
                     href={game?.freetogame_profile_url}
@@ -53,7 +51,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* القسم السفلي */}
               <div>
                 <span className="border-t border-[#FF7F11] block w-full h-0.5 mt-2"></span>
                 <div className="flex flex-row justify-between mt-2 text-xs text-[#F1F1F1]">

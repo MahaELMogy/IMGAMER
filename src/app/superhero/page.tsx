@@ -1,14 +1,14 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { StoreApi } from "./useGamesStore";
-import Spinners from "./_componants/Spinners/Spinners";
+import { StoreApi } from "../useGamesStore";
+import Spinners from "../_componants/Spinners/Spinners";
 
-export default function Home() {
+export default function superhero() {
   const { Games, funFetch, isLoading, error, errorMsg } = StoreApi();
 
   useEffect(() => {
-    funFetch("mmorpg");
+    funFetch("superhero");
   }, []);
 
   if (isLoading) return <Spinners />;
