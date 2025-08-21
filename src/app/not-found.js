@@ -8,11 +8,11 @@ export default function NotFound() {
             404
           </h1>
           <p className="mb-4 text-3xl tracking-tight font-bold text-[#F1F1F1]">
-            Something's missing.
+            Something&apos;s missing.
           </p>
           <p className="mb-4 text-lg font-light text-[#A0A3B1]">
-            Sorry, we can't find that page. You'll find lots to explore on the
-            home page.{" "}
+            Sorry, we can&apos;t find that page. You&apos;ll find lots to
+            explore on the home page.
           </p>
           <Link
             href="/"
