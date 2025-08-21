@@ -13,6 +13,6 @@ export interface ArrOffFun {
   Games: Game[];
   errorMsg: string;
   isLoading: boolean;
-  error: any;
+  error: unknown ;
   funFetch: (category: string) => Promise<void>;
 }

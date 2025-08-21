@@ -7,7 +7,7 @@ import { StoreApi } from "../useGamesStore";
 import Image from "next/image";
 import type { Game } from "../types/Games";
 
-function sailing() {
+function Sailing() {
   const { Games, funFetch, isLoading, error, errorMsg } = StoreApi();
   useEffect(() => {
     funFetch("sailing");
@@ -81,4 +81,4 @@ function sailing() {
   );
 }
 
-export default sailing;
+export default Sailing;

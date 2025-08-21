@@ -9,7 +9,7 @@ export default function Shooter() {
 
   useEffect(() => {
     funFetch("shooter");
-  }, []);
+  }, [funFetch]);
 
   if (isLoading) return <Spinners />;
   if (error) return <p>{errorMsg}</p>;

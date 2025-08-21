@@ -26,7 +26,7 @@ export const StoreApi = create<ArrOffFun>((set) => ({
       const data: Game[] = await response.json();
       set({ Games: data, isLoading: false, error: null });
       console.log(data);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("❌ Error fetching data:", err);
       set({
         isLoading: false,

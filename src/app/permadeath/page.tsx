@@ -11,7 +11,7 @@ function permadeath() {
   const { Games, funFetch, isLoading, error, errorMsg } = StoreApi();
   useEffect(() => {
     funFetch("permadeath");
-  }, []);
+  }, [funFetch]);
   if (isLoading) return <Spinners />;
   if (error) return <p className="text-red-500 text-center mt-6">{errorMsg}</p>;
   return (

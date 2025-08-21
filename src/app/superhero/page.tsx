@@ -4,12 +4,12 @@ import Image from "next/image";
 import { StoreApi } from "../useGamesStore";
 import Spinners from "../_componants/Spinners/Spinners";
 
-export default function superhero() {
+export default function Superhero() {
   const { Games, funFetch, isLoading, error, errorMsg } = StoreApi();
 
   useEffect(() => {
     funFetch("superhero");
-  }, []);
+  }, [funFetch]);
 
   if (isLoading) return <Spinners />;
   if (error) return <p>{errorMsg}</p>;
