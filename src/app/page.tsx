@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
     funFetch("mmorpg");
-  }, []);
+  }, [funFetch]);
 
   if (isLoading) return <Spinners />;
   if (error) return <p>{errorMsg}</p>;
